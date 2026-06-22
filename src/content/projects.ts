@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     image: '/projects/lp-souzaclima.png',
-    text: 'LP SouzaClima',
+    text: 'LP Souza Clima',
   },
   {
     image: '/projects/dashboard-financeiro.png',
@@ -17,6 +17,6 @@ export const projects = [
   },
   {
     image: '/projects/automacao-licitacao.png',
-    text: 'Automacao Licitacao',
+    text: 'Automação Licitação',
   },
 ];
