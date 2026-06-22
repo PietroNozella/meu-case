@@ -22,6 +22,8 @@
 html {
   min-height: 100%;
   background: #09090b;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body {
@@ -29,6 +31,10 @@ body {
   min-height: 100vh;
   margin: 0;
   background: #09090b;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 button,
