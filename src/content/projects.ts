@@ -8,6 +8,18 @@ export const projects = [
     text: 'LP Altivuz',
   },
   {
+    image: '/projects/lp-souzaclima.png',
+    text: 'LP SouzaClima',
+  },
+  {
+    image: '/projects/dashboard-financeiro.png',
+    text: 'Dashboard Financeiro',
+  },
+  {
+    image: '/projects/automacao-licitacao.png',
+    text: 'Automacao Licitacao',
+  },
+  {
     image: '/projects/project-2.jpg',
     text: 'Landing Page',
   },
