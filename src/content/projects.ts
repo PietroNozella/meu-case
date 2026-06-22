@@ -1,5 +1,9 @@
 export const projects = [
   {
+    image: '/projects/spsecurity-hero.png',
+    text: 'SP Security',
+  },
+  {
     image: '/projects/altivuz-lp.png',
     text: 'LP Altivuz',
   },

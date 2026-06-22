@@ -596,6 +596,7 @@ class App {
     font: string,
   ) {
     const defaultItems = [
+      { image: '/projects/spsecurity-hero.png', text: 'SP Security' },
       { image: '/projects/altivuz-lp.png', text: 'LP Altivuz' },
       { image: '/projects/project-2.jpg', text: 'Landing Page' },
       { image: '/projects/project-3.jpg', text: 'Dashboard' },
