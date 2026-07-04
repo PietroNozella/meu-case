@@ -125,59 +125,50 @@ export function AboutSection() {
             ))}
           </div>
 
-          <div className="mt-10 border-t border-white/10 pt-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
-              {'Stack em pr\u00e1tica'}
-            </p>
-            <p className="mt-3 max-w-xl text-sm leading-6 text-zinc-400">
-              {'Do conceito ao deploy, conecto interface, dados e automa\u00e7\u00e3o em fluxos simples de manter.'}
-            </p>
-
-            <div className="relative mt-5 h-[560px] max-w-xl overflow-hidden sm:h-[580px]">
-              <CardSwap
-                width={320}
-                height={300}
-                cardDistance={30}
-                verticalDistance={52}
-                delay={6500}
-                pauseOnHover
-                skewAmount={4}
-              >
-                {aboutCards.map((card) => (
-                  <Card
-                    key={card.title}
-                    className="flex flex-col justify-between p-5 text-left"
-                  >
-                    <div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {card.stack.map((technology) => (
-                          <span
-                            key={technology}
-                            className="rounded-md border border-white/10 bg-white/[0.04] px-2 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-300"
-                          >
-                            {technology}
-                          </span>
-                        ))}
-                      </div>
-
-                      <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
-                        {card.focus}
-                      </p>
-                      <h3 className="mt-2 text-xl font-semibold leading-tight text-white">
-                        {card.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-6 text-zinc-400">
-                        {card.description}
-                      </p>
+          <div className="relative mt-8 h-[420px] max-w-xl overflow-hidden sm:h-[440px]">
+            <CardSwap
+              width={320}
+              height={300}
+              cardDistance={30}
+              verticalDistance={52}
+              delay={6500}
+              pauseOnHover
+              skewAmount={4}
+            >
+              {aboutCards.map((card) => (
+                <Card
+                  key={card.title}
+                  className="flex flex-col justify-between p-5 text-left"
+                >
+                  <div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {card.stack.map((technology) => (
+                        <span
+                          key={technology}
+                          className="rounded-md border border-white/10 bg-white/[0.04] px-2 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-300"
+                        >
+                          {technology}
+                        </span>
+                      ))}
                     </div>
 
-                    <pre className="mt-4 overflow-hidden whitespace-pre-wrap break-words rounded-md border border-white/10 bg-black/50 p-3 font-mono text-[11px] leading-5 text-zinc-300">
-                      <code>{card.code}</code>
-                    </pre>
-                  </Card>
-                ))}
-              </CardSwap>
-            </div>
+                    <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
+                      {card.focus}
+                    </p>
+                    <h3 className="mt-2 text-xl font-semibold leading-tight text-white">
+                      {card.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-zinc-400">
+                      {card.description}
+                    </p>
+                  </div>
+
+                  <pre className="mt-4 overflow-hidden whitespace-pre-wrap break-words rounded-md border border-white/10 bg-black/50 p-3 font-mono text-[11px] leading-5 text-zinc-300">
+                    <code>{card.code}</code>
+                  </pre>
+                </Card>
+              ))}
+            </CardSwap>
           </div>
         </div>
       </div>
