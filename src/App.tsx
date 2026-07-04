@@ -5,10 +5,12 @@ import {
   VscSettingsGear,
 } from 'react-icons/vsc';
 import Dock from './components/Dock';
-import Particles from './components/Particles';
+import Lightfall from './components/Lightfall';
 import { AboutSection } from './components/AboutSection';
 import { ProjectsGallerySection } from './components/ProjectsGallerySection';
 import { heroContent } from './content/hero';
+
+const lightfallColors = ['#A6C8FF', '#5227FF', '#FF9FFC'];
 
 const scrollToSection = (sectionId: string) => () => {
   document.getElementById(sectionId)?.scrollIntoView({
@@ -47,18 +49,24 @@ function App() {
         id="home"
         className="relative min-h-screen overflow-hidden bg-zinc-950 text-white"
       >
-        <Particles
+        <Lightfall
           className="absolute inset-0 pointer-events-none"
-          particleColors={['#ffffff']}
-          particleCount={180}
-          particleSpread={7}
-          speed={0.06}
-          particleBaseSize={115}
-          moveParticlesOnHover
-          particleHoverFactor={0.5}
-          alphaParticles
-          disableRotation={false}
-          pixelRatio={1}
+          colors={lightfallColors}
+          backgroundColor="#0A29FF"
+          speed={0.5}
+          streakCount={2}
+          streakWidth={1}
+          streakLength={1}
+          glow={1}
+          density={0.6}
+          twinkle={1}
+          zoom={3}
+          backgroundGlow={0.5}
+          opacity={1}
+          mouseInteraction={false}
+          mouseStrength={0.5}
+          mouseRadius={1}
+          dpr={1}
         />
 
         <div className="absolute inset-0 bg-zinc-950/55" aria-hidden="true" />
