@@ -131,9 +131,10 @@ export function AboutSection() {
               height={350}
               cardDistance={30}
               verticalDistance={52}
-              delay={6000}
+              delay={3000}
               pauseOnHover
               skewAmount={4}
+              easing="linear"
             >
               {aboutCards.map((card) => (
                 <Card
