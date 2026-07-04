@@ -39,7 +39,7 @@ export function ProjectsGallerySection() {
         </div>
       </div>
 
-      <div className="relative z-10 h-[420px] w-full overflow-hidden md:h-[600px]">
+      <div className="relative z-10 h-[380px] w-full overflow-hidden md:h-[600px]">
         <CircularGallery
           items={projects}
           bend={0.75}

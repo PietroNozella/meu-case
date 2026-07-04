@@ -95,12 +95,12 @@ export function AboutSection() {
           />
 
           <div
-            className="absolute inset-y-0 left-0 z-20 w-1/4 bg-gradient-to-r from-zinc-950 to-transparent"
+            className="absolute inset-y-0 left-0 z-20 w-[12%] bg-gradient-to-r from-zinc-950 to-transparent lg:w-1/4"
             aria-hidden="true"
           />
 
           <div
-            className="absolute inset-y-0 right-0 z-20 w-1/4 bg-gradient-to-l from-zinc-950 to-transparent"
+            className="absolute inset-y-0 right-0 z-20 w-[12%] bg-gradient-to-l from-zinc-950 to-transparent lg:w-1/4"
             aria-hidden="true"
           />
 
