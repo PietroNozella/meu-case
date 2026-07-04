@@ -10,7 +10,7 @@ import { AboutSection } from './components/AboutSection';
 import { ProjectsGallerySection } from './components/ProjectsGallerySection';
 import { heroContent } from './content/hero';
 
-const lightfallColors = ['#A6C8FF', '#5227FF', '#FF9FFC'];
+const lightfallColors = ['#FFFFFF', '#D4D4D8', '#71717A'];
 
 const scrollToSection = (sectionId: string) => () => {
   document.getElementById(sectionId)?.scrollIntoView({
@@ -52,17 +52,17 @@ function App() {
         <Lightfall
           className="absolute inset-0 pointer-events-none"
           colors={lightfallColors}
-          backgroundColor="#0A29FF"
+          backgroundColor="#09090B"
           speed={0.5}
           streakCount={2}
           streakWidth={1}
           streakLength={1}
-          glow={1}
+          glow={0.85}
           density={0.6}
           twinkle={1}
           zoom={3}
-          backgroundGlow={0.5}
-          opacity={1}
+          backgroundGlow={0.25}
+          opacity={0.9}
           mouseInteraction={false}
           mouseStrength={0.5}
           mouseRadius={1}
