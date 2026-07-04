@@ -131,7 +131,7 @@ export function AboutSection() {
               height={350}
               cardDistance={30}
               verticalDistance={52}
-              delay={2000}
+              delay={6000}
               pauseOnHover
               skewAmount={4}
             >
