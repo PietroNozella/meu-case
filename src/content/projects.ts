@@ -4,6 +4,10 @@ export const projects = [
     text: 'SP Security',
   },
   {
+    image: '/projects/spsecurity-secao-lp.png',
+    text: 'Seção LP',
+  },
+  {
     image: '/projects/altivuz-lp.png',
     text: 'LP Altivuz',
   },
