@@ -82,7 +82,7 @@ export function ContactCard({ isOpen, onClose }: ContactCardProps) {
             src="/sem fundo2.png"
             alt=""
             className="h-full w-full object-cover brightness-[0.35] saturate-[0.7]"
-            style={{ filter: 'blur(16px) brightness(0.35) saturate(0.7)' }}
+            style={{ filter: 'blur(3px) brightness(0.35) saturate(0.7)' }}
           />
           <div className="absolute inset-0 bg-zinc-950/40" />
         </div>
@@ -108,16 +108,8 @@ export function ContactCard({ isOpen, onClose }: ContactCardProps) {
           </svg>
         </button>
 
-        <div className="relative z-[1] flex flex-col items-center p-8 pt-12">
-          <div className="h-20 w-20 overflow-hidden rounded-full border-2 border-white/20 shadow-lg shadow-black/30">
-            <img
-              src="/sem fundo2.png"
-              alt="Pietro Nozella"
-              className="h-full w-full object-cover"
-            />
-          </div>
-
-          <p className="mb-1 mt-5 text-center text-sm font-medium text-cyan-200">Contato</p>
+        <div className="relative z-[1] flex flex-col items-center p-8">
+          <p className="mb-1 text-center text-sm font-medium text-cyan-200">Contato</p>
           <h3 className="text-center text-xl font-semibold text-white">Pietro Nozella</h3>
           <p className="text-center text-sm text-zinc-400">Engenheiro de Software</p>
 
