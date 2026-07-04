@@ -60,18 +60,20 @@ export function TechStackSection() {
         <p className="mb-8 text-center text-sm font-medium tracking-wide text-cyan-200">
           Tecnologias
         </p>
-        <LogoLoop
-          logos={techLogos}
-          speed={80}
-          direction="left"
-          logoHeight={48}
-          gap={64}
-          hoverSpeed={0}
-          scaleOnHover
-          fadeOut
-          fadeOutColor="#09090B"
-          ariaLabel="Tecnologias do stack"
-        />
+        <div className="[--logoloop-logoHeight:36px] sm:[--logoloop-logoHeight:48px]">
+          <LogoLoop
+            logos={techLogos}
+            speed={80}
+            direction="left"
+            logoHeight={48}
+            gap={64}
+            hoverSpeed={0}
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#09090B"
+            ariaLabel="Tecnologias do stack"
+          />
+        </div>
       </div>
     </section>
   );
