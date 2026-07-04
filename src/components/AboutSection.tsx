@@ -115,7 +115,7 @@ export function AboutSection() {
           <p className="mb-4 text-sm font-medium text-cyan-200">Sobre mim</p>
 
           <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-white sm:text-5xl">
-            Prazer, sou Pietro Nozella,
+            Prazer, sou Pietro Nozella
             <span className="block text-zinc-300">engenheiro de software.</span>
           </h2>
 
