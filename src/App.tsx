@@ -9,6 +9,7 @@ import Dock from './components/Dock';
 import Lightfall from './components/Lightfall';
 import { AboutSection } from './components/AboutSection';
 import { ProjectsGallerySection } from './components/ProjectsGallerySection';
+import { TechStackSection } from './components/TechStackSection';
 import { ContactCard } from './components/ContactCard';
 import { heroContent } from './content/hero';
 
@@ -104,6 +105,7 @@ function App() {
       </section>
 
       <ProjectsGallerySection />
+      <TechStackSection />
       <AboutSection />
       <ContactCard
         isOpen={isContactOpen}
