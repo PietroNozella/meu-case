@@ -125,13 +125,13 @@ export function AboutSection() {
             ))}
           </div>
 
-          <div className="relative mt-8 h-[420px] max-w-xl overflow-hidden sm:h-[440px]">
+          <div className="relative mt-8 h-[460px] max-w-xl overflow-hidden sm:h-[500px] lg:h-[540px]">
             <CardSwap
-              width={320}
-              height={300}
+              width={380}
+              height={350}
               cardDistance={30}
               verticalDistance={52}
-              delay={6500}
+              delay={4000}
               pauseOnHover
               skewAmount={4}
             >
