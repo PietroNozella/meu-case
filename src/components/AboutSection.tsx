@@ -1,27 +1,56 @@
+import CardSwap, { Card } from './CardSwap';
 import Particles from './Particles';
 
-const specialties = [
-  'Automações',
-  'Dashboards interativos',
-  'Landing Pages de alta conversão',
-  'Aplicações web',
-  'Integrações com APIs',
-  'Cybersegurança',
-];
+const aboutParagraphs = [
+  'Tenho 21 anos e sou formando em Engenharia de Software. Desenvolvo solu\u00e7\u00f5es digitais com foco em automa\u00e7\u00f5es, dashboards interativos, landing pages de alta convers\u00e3o e aplica\u00e7\u00f5es web modernas.',
+  'Minha base combina desenvolvimento full stack, vis\u00e3o de produto e fundamentos de cyberseguran\u00e7a para criar interfaces funcionais, seguras e orientadas a resultado.',
+] as const;
 
-const stack = [
-  'TypeScript',
-  'JavaScript',
-  'Python',
-  'React',
-  'Tailwind CSS',
-  'Supabase',
-  'Vercel',
-  'HTML',
-  'CSS',
-  'SQL',
-  'Git/GitHub',
-];
+const aboutCards = [
+  {
+    title: 'Interfaces & Landing Pages',
+    focus: 'Clareza visual e convers\u00e3o',
+    description: 'Experi\u00eancias responsivas com hierarquia clara, CTA direto e base visual consistente.',
+    stack: ['React', 'TypeScript', 'Tailwind CSS'],
+    code: `const HeroCTA = () => (
+  <section className="grid gap-6">
+    <h1>Produto claro.</h1>
+    <a href="#contact">Comecar</a>
+  </section>
+);`,
+  },
+  {
+    title: 'Automa\u00e7\u00f5es & APIs',
+    focus: 'Fluxos repet\u00edveis e integra\u00e7\u00f5es',
+    description: 'Rotinas pequenas para conectar fontes, limpar dados e reduzir trabalho manual.',
+    stack: ['Python', 'APIs', 'Scripts'],
+    code: `async def sync_leads(api):
+    rows = await api.fetch()
+    clean = normalize(rows)
+    return await api.send(clean)`,
+  },
+  {
+    title: 'Dashboards & Dados',
+    focus: 'M\u00e9tricas acion\u00e1veis',
+    description: 'Consultas e interfaces para acompanhar indicadores sem perder contexto de produto.',
+    stack: ['Supabase', 'SQL', 'React'],
+    code: `const { data } = await supabase
+  .from('metrics')
+  .select('label,value')
+  .order('created_at');`,
+  },
+  {
+    title: 'Produto, Deploy & Seguran\u00e7a',
+    focus: 'Entrega pronta para produ\u00e7\u00e3o',
+    description: 'Deploy previs\u00edvel, revis\u00e3o de mudan\u00e7as e cuidados b\u00e1sicos de seguran\u00e7a no fluxo.',
+    stack: ['Vercel', 'GitHub', 'Cyberseguran\u00e7a'],
+    code: `export const deploy = {
+  preview: 'vercel',
+  checks: ['build', 'headers'],
+  branch: 'main',
+};`,
+  },
+] as const;
 
 export function AboutSection() {
   return (
@@ -91,48 +120,63 @@ export function AboutSection() {
           </h2>
 
           <div className="mt-6 max-w-xl space-y-4 text-sm leading-7 text-zinc-300 sm:text-base">
-            <p>
-              Tenho 21 anos e sou formando em Engenharia de Software. Desenvolvo
-              soluções digitais com foco em automações, dashboards interativos,
-              landing pages de alta conversão e aplicações web modernas.
-            </p>
-
-            <p>
-              Minha base combina desenvolvimento full stack, visão de produto e
-              fundamentos de cybersegurança para criar interfaces funcionais,
-              seguras e orientadas a resultado.
-            </p>
+            {aboutParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
 
-          <div className="mt-8 border-t border-white/10 pt-6">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
-              Especialidades
-            </h3>
+          <div className="mt-10 border-t border-white/10 pt-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
+              {'Stack em pr\u00e1tica'}
+            </p>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-zinc-400">
+              {'Do conceito ao deploy, conecto interface, dados e automa\u00e7\u00e3o em fluxos simples de manter.'}
+            </p>
 
-            <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 text-sm font-medium text-zinc-200">
-              {specialties.map((specialty, index) => (
-                <span key={specialty} className="inline-flex items-center gap-3">
-                  {index > 0 && <span className="text-cyan-200/40">•</span>}
-                  {specialty}
-                </span>
-              ))}
-            </div>
-          </div>
+            <div className="relative mt-5 h-[560px] max-w-xl overflow-hidden sm:h-[580px]">
+              <CardSwap
+                width={320}
+                height={300}
+                cardDistance={30}
+                verticalDistance={52}
+                delay={6500}
+                pauseOnHover
+                skewAmount={4}
+              >
+                {aboutCards.map((card) => (
+                  <Card
+                    key={card.title}
+                    className="flex flex-col justify-between p-5 text-left"
+                  >
+                    <div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {card.stack.map((technology) => (
+                          <span
+                            key={technology}
+                            className="rounded-md border border-white/10 bg-white/[0.04] px-2 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-300"
+                          >
+                            {technology}
+                          </span>
+                        ))}
+                      </div>
 
-          <div className="mt-8">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
-              Stack técnica
-            </h3>
+                      <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
+                        {card.focus}
+                      </p>
+                      <h3 className="mt-2 text-xl font-semibold leading-tight text-white">
+                        {card.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-zinc-400">
+                        {card.description}
+                      </p>
+                    </div>
 
-            <div className="mt-4 flex flex-wrap gap-2">
-              {stack.map((technology) => (
-                <span
-                  key={technology}
-                  className="rounded-md border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs font-medium text-zinc-300 backdrop-blur-sm"
-                >
-                  {technology}
-                </span>
-              ))}
+                    <pre className="mt-4 overflow-hidden whitespace-pre-wrap break-words rounded-md border border-white/10 bg-black/50 p-3 font-mono text-[11px] leading-5 text-zinc-300">
+                      <code>{card.code}</code>
+                    </pre>
+                  </Card>
+                ))}
+              </CardSwap>
             </div>
           </div>
         </div>
