@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   VscAccount,
   VscArchive,
@@ -8,6 +9,7 @@ import Dock from './components/Dock';
 import Lightfall from './components/Lightfall';
 import { AboutSection } from './components/AboutSection';
 import { ProjectsGallerySection } from './components/ProjectsGallerySection';
+import { ContactCard } from './components/ContactCard';
 import { heroContent } from './content/hero';
 
 const lightfallColors = ['#FFFFFF', '#D4D4D8', '#71717A'];
@@ -19,30 +21,32 @@ const scrollToSection = (sectionId: string) => () => {
   });
 };
 
-const dockItems = [
-  {
-    icon: <VscHome size={18} />,
-    label: 'Home',
-    onClick: scrollToSection('home'),
-  },
-  {
-    icon: <VscArchive size={18} />,
-    label: 'Projetos',
-    onClick: scrollToSection('projects'),
-  },
-  {
-    icon: <VscAccount size={18} />,
-    label: 'Sobre',
-    onClick: scrollToSection('about'),
-  },
-  {
-    icon: <VscSettingsGear size={18} />,
-    label: 'Contato',
-    onClick: scrollToSection('contact'),
-  },
-];
-
 function App() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  const dockItems = [
+    {
+      icon: <VscHome size={18} />,
+      label: 'Home',
+      onClick: scrollToSection('home'),
+    },
+    {
+      icon: <VscArchive size={18} />,
+      label: 'Projetos',
+      onClick: scrollToSection('projects'),
+    },
+    {
+      icon: <VscAccount size={18} />,
+      label: 'Sobre',
+      onClick: scrollToSection('about'),
+    },
+    {
+      icon: <VscSettingsGear size={18} />,
+      label: 'Contato',
+      onClick: () => setIsContactOpen(true),
+    },
+  ];
+
   return (
     <main>
       <section
@@ -101,6 +105,10 @@ function App() {
 
       <ProjectsGallerySection />
       <AboutSection />
+      <ContactCard
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
     </main>
   );
 }
