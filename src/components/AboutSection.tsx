@@ -61,10 +61,10 @@ export function AboutSection() {
       <Particles
         className="pointer-events-none absolute inset-0 opacity-70"
         particleColors={['#ffffff']}
-        particleCount={95}
+        particleCount={160}
         particleSpread={11}
-        speed={0.035}
-        particleBaseSize={85}
+        speed={0.08}
+        particleBaseSize={130}
         moveParticlesOnHover
         particleHoverFactor={0.2}
         alphaParticles
@@ -72,7 +72,7 @@ export function AboutSection() {
         pixelRatio={1}
       />
 
-      <div className="absolute inset-0 bg-zinc-950/70" aria-hidden="true" />
+      <div className="absolute inset-0 bg-zinc-950/45" aria-hidden="true" />
       <div
         className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-zinc-950 to-transparent"
         aria-hidden="true"
