@@ -6,6 +6,7 @@ import {
 } from 'react-icons/vsc';
 import Dock from './components/Dock';
 import Particles from './components/Particles';
+import { AboutSection } from './components/AboutSection';
 import { ProjectsGallerySection } from './components/ProjectsGallerySection';
 import { heroContent } from './content/hero';
 
@@ -107,6 +108,7 @@ function App() {
       </section>
 
       <ProjectsGallerySection />
+      <AboutSection />
     </main>
   );
 }
