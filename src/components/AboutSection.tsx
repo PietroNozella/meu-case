@@ -2,8 +2,8 @@ import CardSwap, { Card } from './CardSwap';
 import Particles from './Particles';
 
 const aboutParagraphs = [
-  'Tenho 21 anos e sou formando em Engenharia de Software. Desenvolvo solu\u00e7\u00f5es digitais com foco em automa\u00e7\u00f5es, dashboards interativos, landing pages de alta convers\u00e3o e aplica\u00e7\u00f5es web modernas.',
-  'Minha base combina desenvolvimento full stack, vis\u00e3o de produto e fundamentos de cyberseguran\u00e7a para criar interfaces funcionais, seguras e orientadas a resultado.',
+  'Sou engenheiro de software com perfil pr\u00e1tico, direto e orientado a entrega. Gosto de transformar problemas reais em produtos digitais simples de usar, bem estruturados e prontos para crescer sem complexidade desnecess\u00e1ria.',
+  'Atuo entre frontend, backend, automa\u00e7\u00f5es e dados, conectando vis\u00e3o de produto com execu\u00e7\u00e3o t\u00e9cnica. Meu foco \u00e9 construir interfaces claras, fluxos eficientes e solu\u00e7\u00f5es que economizam tempo, reduzem atrito e geram resultado mensur\u00e1vel.',
 ] as const;
 
 const aboutCards = [
@@ -116,7 +116,7 @@ export function AboutSection() {
 
           <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-white sm:text-5xl">
             Prazer, sou Pietro Nozella,
-            <span className="block text-zinc-300">desenvolvedor full stack.</span>
+            <span className="block text-zinc-300">engenheiro de software.</span>
           </h2>
 
           <div className="mt-6 max-w-xl space-y-4 text-sm leading-7 text-zinc-300 sm:text-base">
